@@ -4,22 +4,293 @@
 \usepackage[dutch]{babel}     
 \usepackage{amsmath, amssymb} 
 
-\title{Edge AI Portfolio}
+\usepackage{graphicx}         
+\usepackage[hidelinks]{hyperref}         
+\usepackage{geometry}         
+\usepackage{float}            
+\usepackage{parskip}          
+
+\geometry{a4paper, margin=2.5cm}
+
+\title{\textbf{Edge AI Portfolio}}
 \author{Yves Braeckman}
 \date{\today}
 
 \begin{document}
 
-% Titelpagina
+% -------------------------------------------------------------------
+% TITELPAGINA
+% -------------------------------------------------------------------
 \maketitle
+\thispagestyle{empty} % Geen paginanummer op de titelpagina
 \newpage
 
-% Inhoudstafel 
+% -------------------------------------------------------------------
+% INHOUDSTAFEL
+% -------------------------------------------------------------------
 \tableofcontents
 \newpage
 
-
+% -------------------------------------------------------------------
+% DEEL 1: ALGEMEEN & LABO'S
+% -------------------------------------------------------------------
 \section{Inleiding}
+% Hier beschrijf je kort de context van dit portfolio.
 
+\newpage
+\section{Portfolio: Lessen en Labo's}
+% INSTRUCTIE: De structuur mag je vrij kiezen, maar chronologisch of per thema is het duidelijkst.
+% Kopieer onderstaand blok (subsection t.e.m. subsubsection) voor ELK labo of hoofdstuk.
+
+\subsection{Labo 1.1}
+
+\subsubsection{Beschrijving en Aanpak}
+% Wat heb je gedaan? Hoe heb je de opdracht aangepakt?
+% Welke tools heb je gebruikt?
+In dit eerste labo heb ik een data analye gedaan op verschillende datasets, om zo een beter begrip van de data te krijgen.
+Dit zorgt er voor dat de volgende stap, het maken van een ML-model, gebeurt op een correcte manier. 
+
+\textbf{Aanpak:}
+Tijdens het maken van het labo heb ik volgende stappen doorlopen: 
+\begin{enumerate}
+    \item \textbf{Data import:} 
+    Ik heb het .csv-bestand gedownload en geïmporteerd in een Python-omgeving met behulp van de pandas library. Dit creëerde een DataFrame waar ik bewerkingen op kon doen.
+    
+    \item \textbf{Analyse:} 
+    Voor de analyse heb ik met behulp van pandas en numpy functies het gemiddelde, de mediaan, de standaardafwijking en de kwartielen berekend.
+    
+    \item \textbf{Visualisatie:} 
+    De volgende stap was de data visualiseren. Hiervoor heb ik gebruikgemaakt van de matplotlib library. Ik heb histogrammen gegenereerd om de vorm van de distributie te controleren en boxplots gemaakt om eventuele uitschieter te vinden.
+    
+    \item \textbf{Interpretatie:} 
+    Ik was bij het maken van het labo niet aan deze stap geraakt en ik heb de correctiesleutel geraadpleegd voor deze stap.
+\end{enumerate}
+
+
+\subsubsection{Persoonlijke Inzichten en Reflectie}
+% BELANGRIJK VOOR PUNTEN:
+% - Beschrijf je inzichten in de context van de theorie.
+% - Wat liep er mis? Hoe heb je dit opgelost?
+% - Geen samenvatting van de theorie, maar JOUW perspectief.
+
+\subsubsection{Conclusie}
+% Korte samenvatting: wat heb je gedaan en wat zijn de resultaten?
+
+
+% -------------------------------------------------------------------
+% labo 4: 
+% -------------------------------------------------------------------
+\newpage
+\subsection{Labo 4}
+
+\subsubsection{Beschrijving en Aanpak}
+% Wat heb je gedaan? Hoe heb je de opdracht aangepakt?
+% Welke tools heb je gebruikt?
+In dit labo was het de bedoeling om zelf een netwerk te bouwen en vervolgens dit netwerk te trainen om geschreven letters van a tot z te herkennen. 
+Als laatste stap moet de performantie van het netwerk getest worden.
+
+\textbf{Aanpak:}
+Tijdens het maken van het labo heb ik volgende stappen doorlopen: 
+
+\begin{enumerate}
+    \item \textbf{Data Acquisitie en Preprocessing:} 
+    Als eerste stap heb ik scaling toegepast op de dataset zodat alle afbeeldingen van uint8 [0, 255] naar float32 [0.0, 1.0] werden omgezet.    
+    
+    \item \textbf{Training en testen:} 
+    De tweede stap was het verdelen van de data in een traning stuk en een test stuk om op het einde de performantie te kunnen testen.
+
+    \item \textbf{Model bouwen:} 
+    Na een beetje opzoekwerk had ik gelezen dat een Conv2D laag beter werkt voor afbeeldingen dan een Dense laag. Ik heb vervolgens verschillende combinaties van lagen geprobeerd en verschillende groottes van lagen.
+    
+    \item \textbf{Training en Compilatie:} 
+    Het model is gecompileerd met de \texttt{Adam} optimizer. Ik heb hier gekozen voor een heel lage learning rate omdat het model anders stopte met leren. Het model is getraind gedurende 15 epochs.
+\end{enumerate}
+
+\textbf{Gebruikte Tools:}
+\begin{itemize}
+    \item \textbf{TensorFlow en Keras:} Voor het bouwen, trainen en evalueren van het neurale netwerk.
+    \item \textbf{TensorFlow Datasets:} Voor het inladen van de EMNIST dataset.
+\end{itemize}
+
+
+\subsubsection{Persoonlijke Inzichten en Reflectie}
+% BELANGRIJK VOOR PUNTEN:
+% - Beschrijf je inzichten in de context van de theorie.
+% - Wat liep er mis? Hoe heb je dit opgelost?
+% - Geen samenvatting van de theorie, maar JOUW perspectief.
+
+Ik vond dit labo interresant omdat dit alles van de vorige labo's een beetje samenbracht. Ik vond het wel lastig om het model te bouwen omdat we hier niet veel over gezien hebben.
+Dit was dus een trail-en-error process en liep niet vlot. 
+
+Ik heb uiteindelijk online opgezocht en gebruik gemaakt van LLM's om te begrijpen wat alle parameters doen bij het bouwen van een model.
+Zo heb ik bijgeleerd over de learning rate en het belang van dit getal bij de training. Wanneer ik dit te hoog koos, ging het model in volledige chaos en leerde het niet, maar als ik het laag koos bleef het model steken op een bepaalde accuracy.
+
+
+\subsubsection{Conclusie}
+% Korte samenvatting: wat heb je gedaan en wat zijn de resultaten?
+
+
+\newpage
+
+% -------------------------------------------------------------------
+% DEEL 2: HET PROJECT (INDIVIDUEEL DEEL)
+% -------------------------------------------------------------------
+\section{Edge AI Project: Rapportage}
+% INSTRUCTIE: Dit vervangt de aparte projectdocumentatie. Dit deel is INDIVIDUEEL.
+
+\subsection{Projectintroductie}
+% EISEN: Maximaal 1 pagina.
+% 1. Motivatie (Waarom dit onderwerp?)
+% 2. Doel (Wat wil je bereiken?)
+% 3. Aanpak (Tools, technologie, opbouw)
+% 4. Opzet van het systeem (Globale werking en structuur)
+% TIP: Mag overlappen met input van de groep, maar schrijf in EIGEN woorden.
+
+\subsubsection*{Motivatie}
+Voor het project van Edge AI, heb ik, samen met mijn groep, gekozen om een afvalsorteersysteem te maken op basis van machine learning.
+Ik vond dit onderwerp interresant omdat dit een brug bouwt tussen sustainable IT en Edge AI, we gebruiken IT om duurzamer te zijn. 
+Ook vond ik het mooi een daglijks probleem te kunnen aanpakken, aangezien er vaak fouten tegen gemaakt worden en het veel efficienter zou kunnen wanneer dit automatisch gebeurt.
+
+\subsubsection*{Doel}
+Het doel van dit project is het ontwerpen en trainen van een machine learning model dat in staat is om vijf verschillende afvalcategorieën correct te classificeren. 
+Daarnaast is het doel om dit model te implementeren op een Coral Dev Board. 
+Hiermee willen we aantonen dat het systeem in staat is om op basis van visuele input een fysieke actie aan te sturen. 
+Binnen dit project simuleren we de aansturing van een sorteermachine visueel met behulp van vijf LED's, waarbij elke LED correspondeert met een specifieke afvalstroom.
+
+\subsubsection*{Aanpak}
+Voor de praktische uitwerking van het project is er gebruik gemaakt van Roboflow voor het uitbreiden en cleanen van de dataset, Python met het TensorFlow library voor het ontwerpen en trainen van het model en een Coral Dev Board met een webcamera.
+
+\subsubsection*{Opzet van het systeem}
+De technische structuur van het systeem is opgebouwd als een eindeloze lus in Python die op het Coral Dev Board draait.
+
+\begin{enumerate}
+    \item \textbf{Initialisatie:} 
+    Bij het opstarten laadt het script het geconverteerde .tflite-model in het geheugen van de Edge TPU en worden de GPIO-pinnen voor de vijf LED's geconfigureerd als output.
+    
+    \item \textbf{Input} 
+    De lus begint met het ophalen van een frame van de live webcam-feed. Dit beeld wordt voorbewerkt door het te schalen naar de input-resolutie die het model verwacht.
+    
+    \item \textbf{Inferentie} 
+    De Edge TPU voert de berekeningen uit op het beeld. Het resultaat is een lijst met waarschijnlijkheidsscores voor elk van de vijf afvalcategorieën.
+    
+    \item \textbf{Output:} 
+    De code controleert of de hoogste score boven een vooraf ingestelde drempelwaarde ligt. Als een van de score's boven de drempel ligt, dan wordt via de GPIO-interface de LED aangestuurd die overeenkomt met de herkende categorie. Indien niets met zekerheid wordt herkend, blijven de LED's uit.
+\end{enumerate}
+
+Dit proces herhaalt zich heel snel, wat zorgt voor een real-time reactie wanneer een gebruiker afval voor de camera houdt.
+
+
+\subsection{Eigen Bijdrage en Leerproces}
+% EISEN:
+% 1. Wat heb jij PERSOONLIJK bijgedragen? (Taken, code, testen, documentatie).
+% 2. Welke keuzes heb jij beïnvloed en waarom?
+% 3. Wat heb je geleerd? (Technisch én persoonlijk).
+% 4. Eventuele moeilijkheden of inzichten.
+
+\subsubsection{Wat heb ik bijgedragen?}
+\subsubsection{Wat heb ik geleerd?}
+
+\newpage
+
+% -------------------------------------------------------------------
+% BIJLAGEN / APPENDIX (GROEPSWERK)
+% -------------------------------------------------------------------
+\appendix
+\section{Appendix: Technical Project Guide}
+% INSTRUCTIE: Dit deel is identiek voor alle groepsleden.
+% Dit is de "Handleiding voor wie het project opnieuw wil opstarten".
+
+\subsection{Benodigde Hardware}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Hardware Component} & \textbf{Specificatie / Opmerking} \\ 
+        \hline
+        Google Coral Dev Board & Om code op te draaien \\ 
+        \hline
+        USB-C Kabel & Voor stroomtoevoer\\ 
+        \hline
+        Ethernet Kabel & Voor SSH \\ 
+        \hline
+        USB Webcam & Input voor beeldherkenning \\ 
+        \hline
+        5x LED & Rood, Groen, Geel, Blauw, Wit \\ 
+        \hline
+        5x Weerstand & $330\Omega$ \\ 
+        \hline
+        Breadboard & Voor het prototype circuit \\ 
+        \hline
+        Jumper Wires & Male-to-Male / Male-to-Female \\ 
+        \hline
+        PC / Laptop & Voor SSH-toegang en opstarten \\ 
+        \hline
+    \end{tabular}
+    \caption{Lijst van benodigde hardware}
+\end{table}
+
+\subsection{Software en Dependencies}
+% Bv. Python packages, TensorFlow, EdgeTPU libraries...
+
+\subsection{Installatie-instructies}
+% Hoe installeer je de drivers, runtime, NVIDA tools, AI-omgeving?
+
+\subsection{Opstartprocedure}
+\subsubsection*{1. Hardware Opstelling}
+Voordat het bord wordt ingeschakeld, moeten alle componenten correct verbonden zijn:
+
+\begin{enumerate}
+    \item \textbf{Camera:} Sluit de USB-webcam aan op de USB-A poort van het Coral Dev Board. Richt de camera op een witte achtergrond met voldoende belichting.
+    \item \textbf{Circuit:} Sluit de LED's en weerstanden aan op het breadboard en verbind deze met de GPIO-pinnen volgens het bedradingsschema.
+    \item \textbf{Netwerk:} Verbind de ethernetkabel met het bord en laptop voor SSH.
+    \item \textbf{Stroom:} Sluit als laatste de USB-C voedingskabel aan op de poort met het label PWR.
+\end{enumerate}
+
+\subsubsection*{2. Verbinding en Uitvoering}
+\textbf{Stap A: Verbind via SSH} \\
+Open een terminal en maak verbinding met het bord:
+\begin{verbatim}
+ssh mendel@192.168.1.100
+\end{verbatim}
+
+\textbf{Stap B: Navigeer naar de projectmap} \\
+Ga naar de folder waar de broncode en het model staan:
+\begin{verbatim}
+cd /home/mendel/Edge-AI-Project
+\end{verbatim}
+
+\textbf{Stap C: Start de applicatie} \\
+Voer het Python-script uit om de detectie te starten.
+\begin{verbatim}
+python3 main.py
+\end{verbatim}
+
+\textbf{Stap D: De applicatie gebruiken} \\
+Ga op de laptop/PC naar de browser en surf naar 192.168.1.100:5000
+
+\subsubsection*{3. Stoppen van het systeem}
+Om het programma te stoppen, druk je in de terminal op:
+\begin{verbatim}
+CTRL + C
+\end{verbatim}
+
+\subsection{Testinstructies en Model Performantie}
+% CRITIAAL ONDERDEEL:
+% 1. Hoe test je in de praktijk? (Hardware check, dependencies check).
+% 2. Hoe activeer je het model? (Commando's, verwachte uitkomsten).
+% 3. Demo-data scenario's.
+
+\subsubsection{Model Analyse}
+% - Welk ML-model (CNN, MobileNet, ...)?
+% - Performantie op testdata (Accuracy, Precision/Recall, Confusion Matrix).
+% - Bron van de scores (Training logs vs echte demo).
+% - Drempelwaardes (Thresholds) en motivatie.
+
+\subsubsection{Foutafhandeling en Beperkingen}
+% - Wat gebeurt er bij foute voorspellingen?
+% - Realisme op edge device (latency, stabiliteit).
+% - Vergelijking met alternatieven?
+% - Bekende problemen.
 
 \end{document}
