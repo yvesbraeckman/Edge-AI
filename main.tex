@@ -36,59 +36,95 @@
 % -------------------------------------------------------------------
 \section{Inleiding}
 % Hier beschrijf je kort de context van dit portfolio.
+Dit document vormt het portfolio voor het opleidingsonderdeel Edge AI.
+
+De wereld van AI evolueert razendsnel. Waar de focus vroeger vaak lag op zware cloud-berekeningen, zien we nu een verschuiving naar lokale intelligentie. Om deze technologie effectief toe te passen, is echter meer nodig dan enkel het kunnen schrijven van code. Een diepgaand inzicht in de volledige data-pipeline, van het verzamelen en opschonen van ruwe data tot het trainen, evalueren en deployen van modellen, is essentieel.
+
+Dit portfolio is opgebouwd uit twee grote delen die deze vaardigheden weerspiegelen:
+
+\begin{enumerate} \item \textbf{Deel 1: Lessen en Labo's}: In dit deel reflecteer ik op de theoretische hoofdstukken en de uitgevoerde labo-opdrachten. Hierbij ligt de nadruk niet op het louter opsommen van definities, maar op mijn persoonlijke inzichten. Ik beschrijf hoe mijn begrip van concepten als data-exploratie, manipulatie en model-training is veranderd en welke valkuilen (zoals \textit{garbage in, garbage out}) ik heb leren herkennen.
+
+\item \textbf{Deel 2: Het Project}: Het tweede deel focust op de praktische integratie van deze kennis in het groepsproject. Hierin hebben we een afvalsorteersysteem ontwikkeld met behulp van Computer Vision op een Google Coral Dev Board. Dit deel demonstreert de vertaalslag van theorie naar een werkend prototype.
+\end{enumerate}
+
+Met dit verslag wil ik aantonen dat ik niet alleen de technische vaardigheden beheers om AI-modellen te bouwen, maar ook de kritische mindset heb ontwikkeld die nodig is om data correct te interpreteren en verantwoorde modellen te ontwikkelen.
+
 
 \newpage
 \section{Portfolio: Lessen en Labo's}
-% INSTRUCTIE: De structuur mag je vrij kiezen, maar chronologisch of per thema is het duidelijkst.
-% Kopieer onderstaand blok (subsection t.e.m. subsubsection) voor ELK labo of hoofdstuk.
+\subsection{Leren uit data}
+Bij het doornemen van dit hoofdstuk werd me eigenlijk pas echt duidelijk hoe groot het verschil is tussen hoe wij als mensen leren en hoe we dat proberen na te bootsen in machines. Ik vond het heel interresant om te zien hoe een ML model eigenlijk een wiskundige definitie is van een functie die de data zo goed mogelijk probeert te benaderen.
 
-\subsection{Labo 1.1}
+Ik dacht vroeger dat een AI gewoon weet wat iets is, maar het hoofdstuk over de MNIST-dataset liet goed zien dat het eigenlijk draait om waarschijnlijkheden. Het model zegt niet dit is een 6, maar ik ben 99,9 zeker dat dit een 6 is. 
 
-\subsubsection{Beschrijving en Aanpak}
-% Wat heb je gedaan? Hoe heb je de opdracht aangepakt?
-% Welke tools heb je gebruikt?
-In dit eerste labo heb ik een data analye gedaan op verschillende datasets, om zo een beter begrip van de data te krijgen.
-Dit zorgt er voor dat de volgende stap, het maken van een ML-model, gebeurt op een correcte manier. 
+Tot slot is het onderscheid tussen ML en AI voor mij nu duidelijker. ML is het herkennen van het patroon, AI is de stap erna: er daadwerkelijk een autonome actie aan koppelen. 
 
-\textbf{Aanpak:}
-Tijdens het maken van het labo heb ik volgende stappen doorlopen: 
-\begin{enumerate}
-    \item \textbf{Data import:} 
-    Ik heb het .csv-bestand gedownload en geïmporteerd in een Python-omgeving met behulp van de pandas library. Dit creëerde een DataFrame waar ik bewerkingen op kon doen.
-    
-    \item \textbf{Analyse:} 
-    Voor de analyse heb ik met behulp van pandas en numpy functies het gemiddelde, de mediaan, de standaardafwijking en de kwartielen berekend.
-    
-    \item \textbf{Visualisatie:} 
-    De volgende stap was de data visualiseren. Hiervoor heb ik gebruikgemaakt van de matplotlib library. Ik heb histogrammen gegenereerd om de vorm van de distributie te controleren en boxplots gemaakt om eventuele uitschieter te vinden.
-    
-    \item \textbf{Interpretatie:} 
-    Ik was bij het maken van het labo niet aan deze stap geraakt en ik heb de correctiesleutel geraadpleegd voor deze stap.
-\end{enumerate}
+Ik heb geleerd dat machine learning eigenlijk gewoon wiskunde is die probeert de werkelijkheid te imiteren, zonder dat het model echt 'begrijpt' wat het ziet. Het belangrijkste inzicht dat ik meeneem is dat we altijd rekening moeten houden met onzekerheid omdat het altijd een benadering van de realiteit blijft. Nu ik ook het verschil tussen het model en de toepassing scherp heb, voel ik me beter voorbereid om met de praktijkopdrachten aan de slag te gaan.
+
+\subsection{Data}
+De term "Garbage In, Garbage Out" kende ik al wel, maar dit hoofdstuk heeft die term voor mij veel concreter gemaakt. Ik dacht eerst dat het vooral ging over 'foute' getallen, maar ik begrijp nu dat het probleem eerder is: begrijp ik eigenlijk wel waar ik naar kijk en begrijp ik waarover ik verwacht dat het ML model een voorspelling maakt?
+
+Een echte eye-opener was voor mij de sectie over het vinden van externe data. Ik had er niet bij stil gestaan dat een goede dataset vinden echt een uitdaging op zich is. Het idee dat je kritisch moet zijn over de bron, de meetmethode en zelfs de context van de data is iets wat ik zeker ga meenemen in mijn project verder in het semester. 
+
+De uitleg over datatypes vond ik best complex. Voorheen zag ik data gewoon als text of getal. Het onderscheid tussen ordinaal, nominaal en intervalschalen is was nieuw voor mij. Vooral het stukje over circulaire data vond ik interresant: je kunt inderdaad niet zomaar het gemiddelde nemen van 23:00 uur en 01:00 uur, want dan kom je wiskundig op de middag uit, terwijl het middernacht moet zijn. 
+
+Ik heb ook het belang van het codeboek ingezien. Zonder dat document kan je de cijfers in een dataset vaak niet correct interpreteren.
+
+Mijn belangrijkste inzicht uit dit hoofdstuk is dat de kwaliteit van mijn AI-model al bepaald wordt ver voordat ik de eerste regel code schrijf. Het verzamelen, begrijpen en opschonen van data is misschien wel de belangrijkste stap. Ik heb geleerd dat ik kritisch moet kijken naar databronnen, rekening moet houden met de specifieke eigenschappen van variabelen en altijd op zoek moet gaan naar het codeboek om de context van de cijfers te begrijpen. Zonder die basis is het niet verantwoord om verder te gaan.
+
+\subsection{Data exploratie}
+Data exploratie leek me vooraf vooral snel wat grafiekjes maken om te zien hoe de data eruit ziet. Dit hoofdstuk liet me zien dat het eigenlijk de belangrijkste fase is om fouten in een later stadium te voorkomen. De DIPKEVER-checklist vond ik een handig ezelsbruggetje. Het voorbeeld van de terrorisme-dataset liet zien hoe makkelijk je misleid kan worden: als een jaartal als een float wordt ingelezen in plaats van een int, kan dat later voor rare bugs zorgen.
+
+Het concept dat de meeste indruk maakte, was de log-transformatie bij de behandelingsduur. In de eerste grafiek zag de data er enorm scheef uit, maar door de natuurlijke logaritme te nemen, veranderde dit in een normaalverdeling. Dit liet me zien dat data soms 'verstopt' zit en dat je wiskundige technieken nodig hebt om het bruikbaar te maken voor statistische modellen. 
+
+Exploratory Data Analysis is voor mij verschoven van grafieken maken naar detectivewerk. Ik heb geleerd dat ik eerst de structuur (datatypes, missende waarden) moet controleren voordat ik inhoudelijk ga analyseren. Mijn belangrijkste inzicht is dat visualisatie niet alleen dient om data te presenteren, maar vooral om dataproblemen zoals scheve verdelingen of outliers op te sporen die mijn model kunnen verpesten. Ik ga voortaan zeker de DIPKEVER-regels toepassen en kritischer kijken naar hoe data verdeeld is voordat ik verder ga.
+
+\subsection{Manipuleren van data}
+Wat ik vooral interessant vond in dit hoofdstuk, is de nuance bij het slicen van de dataset. Het selecteren van variabelen (kolommen) doen we continu, maar het filteren van instanties (rijen) is iets waar we voorzichtig mee moeten zijn. In de theorie werd benadrukt dat je rijen niet zomaar mag weggooien, tenzij er een gegronde reden is, zoals duidelijke invoerfouten of privacykwesties.
+
+Ik heb geleerd dat transformaties soms noodzakelijk zijn om systemen met elkaar te laten praten. Simpele dingen zoals het aanpassen van encodings, het trimmen van spaties in tekstvariabelen of het toevoegen van voorloopnullen lijken simpel, maar zijn cruciaal om data te standaardiseren. Zonder deze stap kunnen ogenschijnlijk gelijke ID's door de computer als verschillend worden gezien, wat analyses fout laat lopen.
+
+Tot slot hebben we gekeken naar het herschalen van numerieke waarden. Vooral normalisatie en standaardisatiezijn technieken die ik zeker ga toepassen in toekomstige opdrachten, omdat veel Edge AI-algoritmes slechter presteren als de schaal van variabelen te ver uit elkaar ligt.
+
+Conclusie In dit onderdeel heb ik geleerd hoe ik ruwe data kan omzetten naar een bruikbare dataset voor analyse. Ik heb in de praktijk gebracht hoe ik uitschieters kan identificeren en verwijderen met behulp van visualisaties zoals de density plot en booleaanse maskers. Mijn belangrijkste resultaat is het inzicht dat elke manipulatie, of het nu gaat om het weglaten van een rij of het afronden van een getal, informatieverlies kan betekenen. Het is dus mijn taak om deze keuzes transparant te rapporteren en te verantwoorden, zodat de analyse integer blijft.
 
 
-\subsubsection{Persoonlijke Inzichten en Reflectie}
-% BELANGRIJK VOOR PUNTEN:
-% - Beschrijf je inzichten in de context van de theorie.
-% - Wat liep er mis? Hoe heb je dit opgelost?
-% - Geen samenvatting van de theorie, maar JOUW perspectief.
+\subsection{Trainen en testen}
+Het belangrijkste inzicht uit dit hoofdstuk was voor mij de realisatie dat Machine Learning geen exacte wetenschap of toverkunst is waarbij we altijd het gewenste resultaat bekomen. We moeten leren leven met onzekerheid en onze verwachtingen bijstellen van "we zullen voorspellen" naar "we hopen te kunnen voorspellen". 
 
-\subsubsection{Conclusie}
-% Korte samenvatting: wat heb je gedaan en wat zijn de resultaten?
+Ik heb geleerd dat strengheid hierbij cruciaal is. De test-set moet volledig verborgen blijven voor het algoritme en eigenlijk ook voor mij tot het allerlaatste moment. Het was leerzaam om te zien dat er naast de training- en test-set vaak nog een validatie-set nodig is. 
 
+Een interessant detail vond ik de uitzondering voor tijdreeksen. Waar we normaal data willekeurig door elkaar gooien om een goede split te krijgen, mag dit absoluut niet bij data met een tijdscomponent vanwege autocorrelatie. Hier moeten we echt een knip in de tijd maken, bijvoorbeeld alles na een bepaald jaartal gebruiken als test.
 
-% -------------------------------------------------------------------
-% labo 4: 
-% -------------------------------------------------------------------
+De workflow voor deep learning gaf mij veel inzicht in het concept overfitting. Door te kijken naar de loss van zowel de training- als de validatie-set tijdens de epochs, kun je precies zien wanneer het model stopt met leren en begint met 'uit het hoofd leren'. 
+
+Mijn belangrijkste conclusie is dat een model pas waarde heeft als het zich heeft bewezen op data die het nog nooit heeft gezien en dat ik als ontwikkelaar altijd waakzaam moet zijn voor valkuilen zoals data lekkage die mijn resultaten kunnen vertekenen
+
+\subsection{Labo 1}
+Ik heb in dit labo geleerd hoe ik een dataset kan inladen en verkennen met behulp van Python en Pandas. Het was interessant om te zien hoe ik met slechts een paar regels code al een goed beeld kon krijgen van de structuur en inhoud van de data.
+
+Ik heb geleerd hoe ik missende waarden kan identificeren en hoe ik basisstatistieken kan berekenen om inzicht te krijgen in de distributie van de variabelen.
+
+Daarnaast heb ik geleerd hoe ik visualisaties kan maken met Matplotlib om patronen en relaties in de data te ontdekken. Door een correlatiematrix en heatmap te maken, kreeg ik inzicht in welke variabelen daadwerkelijk invloed hadden op de te voorspellen variabele. Dit bevestigde voor mij het nut van stap 2 uit de opdracht: zonder deze visuele check tast je eigenlijk in het duister over welke features relevant zijn.
+
+Mijn belangrijkste inzicht is dat een grondige verkenning van de data essentieel is voordat ik verder ga met analyse of modellering. Het helpt me om potentiële problemen te identificeren en beter geïnformeerde beslissingen te nemen over hoe ik de data verder wil verwerken. Dit is ook nog eens extra duidelijk geworden tijdens het Hack The Future event, waar ik een ML opdracht had.
+Hier heb ik de vaardigheden die ik in dit labo heb geleerd kunnen toepassen om de dataset te verkennen en voor te bereiden voor modellering.
+
 \newpage
+\subsection{Labo 2}
+
+
+
+\subsection{Labo 3}
+Ik heb in dit labo geleerd hoe een belagrijke rol ML speelt in het dagelijkse leven. Het was heel interessant om te zien hoe google hun verzamelde data en ML modellen gebruikt om ons gepersonaliseerde advertenties te tonen en aankopen te voorspellen.
+Ik vond het in het begin lastig om te werken met de google Big Query omgeving, maar na een tijdje had ik de basis onder de knie. 
+
+Ik heb geleerd hoe ik SQL queries kan schrijven om data op te halen en te analyseren. Het was interessant om te zien hoe ik met behulp van SQL verschillende inzichten kon verkrijgen uit de grote datasets die google ter beschikking stelt.
+
+
 \subsection{Labo 4}
 
 \subsubsection{Beschrijving en Aanpak}
-% Wat heb je gedaan? Hoe heb je de opdracht aangepakt?
-% Welke tools heb je gebruikt?
-In dit labo was het de bedoeling om zelf een netwerk te bouwen en vervolgens dit netwerk te trainen om geschreven letters van a tot z te herkennen. 
-Als laatste stap moet de performantie van het netwerk getest worden.
-
 \textbf{Aanpak:}
 Tijdens het maken van het labo heb ik volgende stappen doorlopen: 
 
@@ -106,28 +142,16 @@ Tijdens het maken van het labo heb ik volgende stappen doorlopen:
     Het model is gecompileerd met de \texttt{Adam} optimizer. Ik heb hier gekozen voor een heel lage learning rate omdat het model anders stopte met leren. Het model is getraind gedurende 15 epochs.
 \end{enumerate}
 
-\textbf{Gebruikte Tools:}
-\begin{itemize}
-    \item \textbf{TensorFlow en Keras:} Voor het bouwen, trainen en evalueren van het neurale netwerk.
-    \item \textbf{TensorFlow Datasets:} Voor het inladen van de EMNIST dataset.
-\end{itemize}
-
-
 \subsubsection{Persoonlijke Inzichten en Reflectie}
 % BELANGRIJK VOOR PUNTEN:
 % - Beschrijf je inzichten in de context van de theorie.
 % - Wat liep er mis? Hoe heb je dit opgelost?
 % - Geen samenvatting van de theorie, maar JOUW perspectief.
-
 Ik vond dit labo interresant omdat dit alles van de vorige labo's een beetje samenbracht. Ik vond het wel lastig om het model te bouwen omdat we hier niet veel over gezien hebben.
 Dit was dus een trail-en-error process en liep niet vlot. 
 
 Ik heb uiteindelijk online opgezocht en gebruik gemaakt van LLM's om te begrijpen wat alle parameters doen bij het bouwen van een model.
 Zo heb ik bijgeleerd over de learning rate en het belang van dit getal bij de training. Wanneer ik dit te hoog koos, ging het model in volledige chaos en leerde het niet, maar als ik het laag koos bleef het model steken op een bepaalde accuracy.
-
-
-\subsubsection{Conclusie}
-% Korte samenvatting: wat heb je gedaan en wat zijn de resultaten?
 
 
 \newpage
