@@ -42,7 +42,7 @@ De wereld van AI evolueert razendsnel. Waar de focus vroeger vaak lag op zware c
 
 Dit portfolio is opgebouwd uit twee grote delen die deze vaardigheden weerspiegelen:
 
-\begin{enumerate} \item \textbf{Deel 1: Lessen en Labo's}: In dit deel reflecteer ik op de theoretische hoofdstukken en de uitgevoerde labo-opdrachten. Hierbij ligt de nadruk niet op het louter opsommen van definities, maar op mijn persoonlijke inzichten. Ik beschrijf hoe mijn begrip van concepten als data-exploratie, manipulatie en model-training is veranderd en welke valkuilen (zoals \textit{garbage in, garbage out}) ik heb leren herkennen.
+\begin{enumerate} \item \textbf{Deel 1: Lessen en Labo's}: In dit deel reflecteer ik op de theoretische hoofdstukken en de uitgevoerde labo-opdrachten. Hierbij ligt de nadruk niet op het louter opsommen van definities, maar op mijn persoonlijke inzichten. Ik beschrijf hoe mijn begrip van concepten als data-exploratie, manipulatie en model-training is veranderd en welke valkuilen ik heb leren herkennen.
 
 \item \textbf{Deel 2: Het Project}: Het tweede deel focust op de praktische integratie van deze kennis in het groepsproject. Hierin hebben we een afvalsorteersysteem ontwikkeld met behulp van Computer Vision op een Google Coral Dev Board. Dit deel demonstreert de vertaalslag van theorie naar een werkend prototype.
 \end{enumerate}
@@ -77,7 +77,7 @@ Data exploratie leek me vooraf vooral snel wat grafiekjes maken om te zien hoe d
 
 Het concept dat de meeste indruk maakte, was de log-transformatie bij de behandelingsduur. In de eerste grafiek zag de data er enorm scheef uit, maar door de natuurlijke logaritme te nemen, veranderde dit in een normaalverdeling. Dit liet me zien dat data soms 'verstopt' zit en dat je wiskundige technieken nodig hebt om het bruikbaar te maken voor statistische modellen. 
 
-Exploratory Data Analysis is voor mij verschoven van grafieken maken naar detectivewerk. Ik heb geleerd dat ik eerst de structuur (datatypes, missende waarden) moet controleren voordat ik inhoudelijk ga analyseren. Mijn belangrijkste inzicht is dat visualisatie niet alleen dient om data te presenteren, maar vooral om dataproblemen zoals scheve verdelingen of outliers op te sporen die mijn model kunnen verpesten. Ik ga voortaan zeker de DIPKEVER-regels toepassen en kritischer kijken naar hoe data verdeeld is voordat ik verder ga.
+Exploratory Data Analysis is voor mij verschoven van grafieken maken naar detectivewerk. Ik heb geleerd dat ik eerst de structuur moet controleren voordat ik inhoudelijk ga analyseren. Mijn belangrijkste inzicht is dat visualisatie niet alleen dient om data te presenteren, maar vooral om dataproblemen zoals scheve verdelingen of outliers op te sporen die mijn model kunnen verpesten. Ik ga voortaan zeker de DIPKEVER-regels toepassen en kritischer kijken naar hoe data verdeeld is voordat ik verder ga.
 
 \subsection{Manipuleren van data}
 Wat ik vooral interessant vond in dit hoofdstuk, is de nuance bij het slicen van de dataset. Het selecteren van variabelen (kolommen) doen we continu, maar het filteren van instanties (rijen) is iets waar we voorzichtig mee moeten zijn. In de theorie werd benadrukt dat je rijen niet zomaar mag weggooien, tenzij er een gegronde reden is, zoals duidelijke invoerfouten of privacykwesties.
@@ -112,8 +112,9 @@ Hier heb ik de vaardigheden die ik in dit labo heb geleerd kunnen toepassen om d
 
 \newpage
 \subsection{Labo 2}
-
-
+Ik heb in dit labo geleerd hoe ik bewerkingen op matrices kan doen in Python met behulp van de TensorFlow library. vervolgens heb ik ook geleerd hoe ik verschillende soorten data in TensorFlow kan krijgen.
+Het laatste deel van het labo heeft mij voor de eerste keer een duidelijk beeld gegeven van hoe we te werk gaan voor het opstellen van een ML model.
+Dit heeft mij geholpen om ook de Theorie beter te begrijpen omdat dit deel van het labo de theorie tastbaar maakte. 
 
 \subsection{Labo 3}
 Ik heb in dit labo geleerd hoe een belagrijke rol ML speelt in het dagelijkse leven. Het was heel interessant om te zien hoe google hun verzamelde data en ML modellen gebruikt om ons gepersonaliseerde advertenties te tonen en aankopen te voorspellen.
@@ -212,7 +213,21 @@ Dit proces herhaalt zich heel snel, wat zorgt voor een real-time reactie wanneer
 % 4. Eventuele moeilijkheden of inzichten.
 
 \subsubsection{Wat heb ik bijgedragen?}
-\subsubsection{Wat heb ik geleerd?}
+
+Mijn bijdrage aan het Edge AI-project was vooral in 3 onderdelen: data, documentatie en hardware-implementatie.
+
+Ten eerste was ik verantwoordelijk voor de voorbereiding van de dataset. Ik heb hiervoor de keuze gemaakt om Roboflow in te zetten. Dit stelde mij in staat om efficiënt data-augmentaties toe te passen en direct de benodigde splits (train/validatie/test) te genereren. 
+
+Ten tweede heb ik de technische implementatie op het device verder verzorgd. Na dat Sander het model op de hardware had doen werken, heb ik de Python-code geschreven voor de GPIO-aansturing en de labeling op het scherm.
+
+Tot slot heb ik in de Project Guide de hoofdstukken 'Hardware' en 'Opstartprocedure' geschreven.
+
+\subsubsection{Wat heb ik geleerd en welke uitdagingen waren er?}
+Ik heb de volledige workflow van een Machine Learning-project leren beheersen: van data zoeken tot deployment op een edge device. Op persoonlijk vlak heeft dit project mijn zelfvertrouwen vergroot in het werken met embedded systemen voor ML. 
+
+Een aanzienlijke uitdaging was de integratie van het model op de Coral Dev Board. Dit verliep initieel stroef, waardoor ik mij heb moeten verdiepen in de documentatie en specifieke libraries van Coral/Google om de GPIO aansturing werkend te krijgen.
+
+Daarnaast vormde de output-verwerking een obstakel: het model gaf enkel numerieke ID's terug. Ik heb logica moeten schrijven om deze ID's real-time te mappen naar leesbare klassenamen op het scherm. 
 
 \newpage
 

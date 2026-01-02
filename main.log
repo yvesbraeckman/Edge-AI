@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.16)  2 JAN 2026 10:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.16)  2 JAN 2026 11:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,28 +367,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.285 \end{verbatim}
+l.300 \end{verbatim}
                     ] [11] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 134A0FA152B6FEA248ED3003D608CEFD;4118.
+(rerunfilecheck)             Checksum: BFFE33EE03DC76C176E59D6905A2D60B;4283.
  ) 
 Here is how much of TeX's memory you used:
- 11330 strings out of 475567
- 176229 string characters out of 5777889
+ 11328 strings out of 475567
+ 176208 string characters out of 5777889
  1936187 words of memory out of 5000000
- 33281 multiletter control sequences out of 15000+600000
- 567655 words of font info for 73 fonts, out of 8000000 for 9000
+ 33280 multiletter control sequences out of 15000+600000
+ 567308 words of font info for 72 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  75i,9n,79p,646b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (11 pages, 85526 bytes).
+</usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (11 pages, 77308 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
+ 239 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
  61 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
